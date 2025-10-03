@@ -291,8 +291,3 @@ else:
 with st.expander("Show data (first 200 rows)"):
     st.write(df_work.head(200))
 
-st.markdown("---")
-st.markdown("**Notes:** If any charts show no data, either the dataset lacks the required column or the selected filters removed all rows. This app attempts to be tolerant of missing columns and will gracefully skip charts that can't be created.")
-
-# Footer - helpful tips
-st.markdown("If you want additional charts from the original EDA (specific formatting or colors), tell me which ones and I'll add them.")
