@@ -1,6 +1,7 @@
 # 📊 E-Commerce Data Analysis with Streamlit
 # Author: Ayesha Arshad
-# ------------------------------------------
+# -------------------------------------------
+
 
 # ============ 1. IMPORT LIBRARIES ============
 import pandas as pd
@@ -10,7 +11,7 @@ import streamlit as st
 # ============ 2. LOAD DATA ============
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/ecommerce.csv")  # make sure you have your CSV in a /data folder
+    df = pd.read_csv("ecommerce_dataset.csv")  # ✅ fixed filename
     df = df.drop_duplicates()
     df['OrderDate'] = pd.to_datetime(df['OrderDate'])
     df['YearMonth'] = df['OrderDate'].dt.to_period("M")
